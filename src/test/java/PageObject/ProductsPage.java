@@ -44,7 +44,8 @@ public class ProductsPage {
     public void click_sneakerdropdown(String str){
         ldriver.findElement(sneakersdropdown).click();
         String sneakershoe=ldriver.findElement(By.xpath("/html/body/div[4]/table/tbody/tr[1]/td[1]")).getText();
-        if(sneakershoe.trim().equals(str)){
+        String st=sneakershoe.trim();
+        if(st.equals(str)){
             Assert.assertTrue(true);
         }
         else{
